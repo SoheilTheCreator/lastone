@@ -1,0 +1,7 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next/standalone",
+  "staticDirectory": ".next/static",
+  "startCommand": "node server.js",
+  "environment": "production"
+}

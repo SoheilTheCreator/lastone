@@ -1,0 +1,8 @@
+[
+    {"label": "خانه", "value": "home"},
+    {"label": "مدیریت انبار", "value": "inventory"},
+    {"label": "مدیریت منو", "value": "orders"},
+    {"label": "صندوق", "value": "register"},
+    {"label": "آمارگیری", "value": "reports"},
+    {"label": "مدیریت کاربران", "value":"usermaker"}
+]
