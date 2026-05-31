@@ -1,8 +1,6 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": ".next/standalone",
-  "staticDirectory": ".next/standalone/.next/static",
-  "publicDirectory": "public",
-  "startCommand": "node server.js",
-  "environment": "production"
+  "outputDirectory": "out",
+  "startCommand": "npx serve out",
+
 }
