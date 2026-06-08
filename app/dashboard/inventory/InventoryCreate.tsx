@@ -206,13 +206,11 @@ export default function InventoryCreate() {
             name: form.name,
             code: form.code,
             reorder_point: Number(form.reorder_point) || 0,
-            unit: form.unit || 'kg', // Default unit
-            price: Number(form.price) || 0, // Add price field
+          
           }
         : {
             name: form.name,
             code: form.code,
-            total_weight_grams: Number(form.total_weight_grams) || Number(form.reorder_point) || 0,
             reorder_point: Number(form.reorder_point) || 0,
           }
 
@@ -325,25 +323,11 @@ export default function InventoryCreate() {
               className="w-full rounded-2xl border border-[var(--secondary)] bg-[var(--bg)] px-4 py-4 outline-none transition focus:border-[var(--button)]"
             />
             
-            <input
-              type="number"
-              placeholder="قیمت خرید (تومان)"
-              value={form.price}
-              onChange={(e) => setForm({ ...form, price: e.target.value })}
-              className="w-full rounded-2xl border border-[var(--secondary)] bg-[var(--bg)] px-4 py-4 outline-none transition focus:border-[var(--button)]"
-            />
+            
           </>
         )}
 
-        {type === 'box' && (
-          <input
-            type="number"
-            placeholder="وزن کل (گرم)"
-            value={form.total_weight_grams}
-            onChange={(e) => setForm({ ...form, total_weight_grams: e.target.value })}
-            className="w-full rounded-2xl border border-[var(--secondary)] bg-[var(--bg)] px-4 py-4 outline-none transition focus:border-[var(--button)]"
-          />
-        )}
+        
 
         <input
           type="number"
