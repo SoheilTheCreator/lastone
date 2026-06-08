@@ -313,19 +313,10 @@ export default function InventoryCreate() {
           required
         />
 
-        {type === 'ingredient' && (
-          <>
-            <input
-              type="text"
-              placeholder="واحد (مثلاً: kg, gr, لیتر)"
-              value={form.unit}
-              onChange={(e) => setForm({ ...form, unit: e.target.value })}
-              className="w-full rounded-2xl border border-[var(--secondary)] bg-[var(--bg)] px-4 py-4 outline-none transition focus:border-[var(--button)]"
-            />
+        
             
             
-          </>
-        )}
+          
 
         
 
