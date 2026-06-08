@@ -196,7 +196,7 @@ export default function InventoryCreate() {
     // Corrected endpoints
     const endpoint =
       type === 'ingredient'
-        ? 'https://polemis.runflare.run/api/v1/inventory/products/'
+        ? 'https://polemis.runflare.run/api/v1/inventory/products/create'
         : 'https://polemis.runflare.run/api/v1/inventory/boxes'
 
     // Corrected payload based on typical API expectations
