@@ -397,8 +397,8 @@ export default function OrderCreate() {
     const loadData = async () => {
       try {
         const [ingRes, boxRes] = await Promise.all([
-          apiRequest("http://polemis.runflare.run/api/v1/inventory/ingredients", null, "GET"),
-          apiRequest("http://polemis.runflare.run/api/v1/inventory/boxes", null, "GET"),
+          apiRequest("https://polemis.runflare.run/api/v1/inventory/ingredients", null, "GET"),
+          apiRequest("https://polemis.runflare.run/api/v1/inventory/boxes", null, "GET"),
         ]);
         
         const combined = [
@@ -491,7 +491,7 @@ export default function OrderCreate() {
     };
 
     try {
-      await apiRequest("http://polemis.runflare.run/api/v1/items", payload, "POST");
+      await apiRequest("https://polemis.runflare.run/api/v1/items", payload, "POST");
       alert("آیتم جدید با موفقیت در منو ثبت شد.");
       // Reset Form
       setRows([]);

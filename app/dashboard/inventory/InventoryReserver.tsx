@@ -25,8 +25,8 @@ export default function InventoryReserver() {
     const fetchItems = async () => {
       try {
         const [ingRes, boxRes] = await Promise.all([
-          apiGetAll("http://polemis.runflare.run/api/v1/inventory/ingredients"),
-          apiGetAll("http://polemis.runflare.run/api/v1/inventory/boxes"),
+          apiGetAll("https://polemis.runflare.run/api/v1/inventory/ingredients"),
+          apiGetAll("https://polemis.runflare.run/api/v1/inventory/boxes"),
         ]);
 
         const formattedIngs = ingRes.data.map((i: any) => ({ ...i, type: "ING" }));
@@ -64,7 +64,7 @@ export default function InventoryReserver() {
      * Release: /api/v1/inventory/products/release (ING) or /boxes/release (BOX)
      */
     const category = selectedItem.type === "BOX" ? "boxes" : "stock";
-    const endpoint = `http://polemis.runflare.run/api/v1/inventory/${category}/${selectedItem.id}/${action}`;
+    const endpoint = `https://polemis.runflare.run/api/v1/inventory/${category}/${selectedItem.id}/${action}`;
 
     const payload = selectedItem.type === "BOX" 
       ? { quantity: amount }

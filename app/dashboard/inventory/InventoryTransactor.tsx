@@ -25,8 +25,8 @@ export default function InventoryTransaction() {
     const fetchInventory = async () => {
       try {
         const [ingRes, boxRes] = await Promise.all([
-          apiRequest('http://polemis.runflare.run/api/v1/inventory/ingredients', null, 'GET'),
-          apiRequest('http://polemis.runflare.run/api/v1/inventory/boxes', null, 'GET')
+          apiRequest('https://polemis.runflare.run/api/v1/inventory/ingredients', null, 'GET'),
+          apiRequest('https://polemis.runflare.run/api/v1/inventory/boxes', null, 'GET')
         ]);
 
         const combined: InventoryItem[] = [
@@ -65,7 +65,7 @@ export default function InventoryTransaction() {
     const signedQuantity = transactionReason === 'purchase' ? quantity : quantity * -1
 
     const endpoint =
-      'http://polemis.runflare.run/api/v1/inventory/transactions'
+      'https://polemis.runflare.run/api/v1/inventory/transactions'
 
     const payload = isBox
       ? {

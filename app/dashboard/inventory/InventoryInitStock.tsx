@@ -29,8 +29,8 @@ export default function InventoryStock() {
          * Fetching ingredients from Page 5/6 and boxes from Page 12
          */
         const [ingRes, boxRes] = await Promise.all([
-          apiGetAll('http://polemis.runflare.run/api/v1/inventory/ingredients'),
-          apiGetAll('http://polemis.runflare.run/api/v1/inventory/boxes')
+          apiGetAll('https://polemis.runflare.run/api/v1/inventory/ingredients'),
+          apiGetAll('https://polemis.runflare.run/api/v1/inventory/boxes')
         ]);
 
         const ingredients: InventoryItem[] = ingRes.data.map((i: any) => ({ 
@@ -77,8 +77,8 @@ export default function InventoryStock() {
      * Boxes       -> /v1/inventory/boxes/stock (Page 3)
      */
     const endpoint = isBox
-      ? 'http://polemis.runflare.run/api/v1/inventory/boxes/stock'
-      : 'http://polemis.runflare.run/api/v1/inventory/products/stock'
+      ? 'https://polemis.runflare.run/api/v1/inventory/boxes/stock'
+      : 'https://polemis.runflare.run/api/v1/inventory/products/stock'
 
     const payload = isBox
       ? {

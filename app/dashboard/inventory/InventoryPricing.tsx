@@ -24,8 +24,8 @@ export default function InventoryPricing() {
     const loadInventory = async () => {
       try {
         const [ingRes, boxRes] = await Promise.all([
-          apiGetAll("http://polemis.runflare.run/api/v1/inventory/ingredients"),
-          apiGetAll("http://polemis.runflare.run/api/v1/inventory/boxes"),
+          apiGetAll("https://polemis.runflare.run/api/v1/inventory/ingredients"),
+          apiGetAll("https://polemis.runflare.run/api/v1/inventory/boxes"),
         ]);
         
         const ings = ingRes.data.map((i: any) => ({ ...i, type: "ING" }));
@@ -72,7 +72,7 @@ export default function InventoryPricing() {
      */
     
     const isBox = selectedItem.type === "BOX";
-    const endpoint = "http://polemis.runflare.run/api/v1/inventory/prices/update"; 
+    const endpoint = "https://polemis.runflare.run/api/v1/inventory/prices/update"; 
 
     const payload = isBox
       ? {

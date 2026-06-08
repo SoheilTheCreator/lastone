@@ -48,7 +48,7 @@ export default function OrderViewer() {
          * Using the Item Maker list endpoint.
          * Endpoint: http://localhost/api/v1/item-maker/items
          */
-        const response = await apiGetAll("http://polemis.runflare.run/api/v1/items");
+        const response = await apiGetAll("https://polemis.runflare.run/api/v1/items");
         
         // Ensure the data is formatted correctly for the UI
         const formattedData = (response.data || []).map((item: any) => ({

@@ -57,8 +57,8 @@ export default function InventoryViewer(props:any) {
       setLoading(true);
       try {
         const [ingRes, boxRes] = await Promise.all([
-          apiGetAll("http://polemis.runflare.run/api/v1/inventory/ingredients"),
-          apiGetAll("http://polemis.runflare.run/api/v1/inventory/boxes"),
+          apiGetAll("https://polemis.runflare.run/api/v1/inventory/ingredients"),
+          apiGetAll("https://polemis.runflare.run/api/v1/inventory/boxes"),
         ]);
 
         // Map API response to match InventoryProduct type

@@ -24,7 +24,7 @@ export default function LoginForm() {
     // Login API junction 
     try{
       const payload = await apiRequest(
-        'http://polemis.runflare.run/api/login', // API LINK GOES HERE literally All you need to change
+        'https://polemis.runflare.run/api/login', // API LINK GOES HERE literally All you need to change
         {
           username: username, // make sure these work
           password: password
